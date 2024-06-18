@@ -1,6 +1,8 @@
 import argparse
-from transformers import AutoTokenizer, AutoModelForCausalLM
+from transformers import AutoTokenizer, AutoModelForCausalLM, AutoConfig
 import json
+
+terminators = []
 
 def get_args():
     parser = argparse.ArgumentParser(description="Run inference on a jsonl file with questions.")
@@ -20,14 +22,33 @@ def get_args():
     return args
 
 def load_model(model_path):
+    global terminators
+    device_map = "auto"
+    
     tokenizer = AutoTokenizer.from_pretrained(
         model_path, trust_remote_code=True,
     )
+
+    terminators = [tokenizer.eos_token_id]
+    config = AutoConfig.from_pretrained(
+        model_path, trust_remote_code=True
+    )
+    if config.model_type == "chatglm":
+        # for glm-4-9b-chat
+        device_map = "cuda"
+    elif config.model_type == "llama":
+        # for Yi-1.5-34B-Chat
+        terminators += [
+            tokenizer.convert_tokens_to_ids("<|eot_id|>"),
+            tokenizer.convert_tokens_to_ids("<|im_end|>")
+        ]
+    
     model = AutoModelForCausalLM.from_pretrained(
         model_path,
-        device_map="auto",
+        device_map=device_map,
         trust_remote_code=True,
     ).eval()
+    
     return model, tokenizer
 
 def model_interface(args):
@@ -52,16 +73,18 @@ def model_interface(args):
             
 
 def model_gen(tokenizer, model, question, args):
+    global terminators
     device = next(model.parameters()).device
     text = tokenizer.apply_chat_template(
         [{"role": "user", "content": question}],
         tokenize=False,
         add_generation_prompt=True
     )
-    model_inputs = tokenizer([text], return_tensors="pt").to(device)
 
-    generated_ids = model.generate(
-        model_inputs,
+    inputs = tokenizer(text, return_tensors="pt").to(device)
+    outputs = model.generate(
+        inputs.input_ids, 
+        eos_token_id=terminators,
         max_length=args.max_len,
         do_sample=args.do_sample,
         temperature=args.temperature,
@@ -69,11 +92,8 @@ def model_gen(tokenizer, model, question, args):
         top_p=args.top_p,
         top_k=args.top_k
     )
-    generated_ids = [
-        output_ids[len(input_ids):] for input_ids, output_ids in zip(model_inputs.input_ids, generated_ids)
-    ]
-
-    response = tokenizer.batch_decode(generated_ids, skip_special_tokens=True)[0]
+    outputs = outputs[:, inputs["input_ids"].shape[1]:]
+    response = tokenizer.decode(outputs[0], skip_special_tokens=True)
     return response
 
 if __name__ == "__main__":

@@ -148,7 +148,7 @@
 │       └── 语文/
 └── src/               # 模型推理脚本与交互代码
     ├── infer_internlm.py    
-    └── infer_qwen.py
+    └── infer_chat.py
 ```
 
 # 最新进展
