@@ -28,49 +28,49 @@
       <td>总分（满分420）</td>
     </tr>
     <tr>
-      <td>阿里 千问2-72B</td>
+      <td>千问2-72B</td>
       <td>124</td>
       <td>70</td>
       <td>109</td>
       <td>303</td>
     </tr>
     <tr>
-      <td>OpenAI GPT-4o</td>
+      <td>GPT-4o</td>
       <td>111.5</td>
       <td>73</td>
       <td>111.5</td>
       <td>296</td>
     </tr>
     <tr>
-      <td>上海人工智能实验室 书生·浦语-文曲星-20B</td>
+      <td>书生·浦语-文曲星-20B</td>
       <td>112</td>
       <td>75</td>
       <td>108.5</td>
       <td>295.5</td>
     </tr>
     <tr>
-      <td>阿里 千问2-57B</td>
+      <td>千问2-57B</td>
       <td>99.5</td>
       <td>58</td>
       <td>96.5</td>
       <td>254</td>
     </tr>
     <tr>
-      <td>零一万物 Yi-1.5-34B</td>
+      <td>Yi-1.5-34B</td>
       <td>97</td>
       <td>29</td>
       <td>104.5</td>
       <td>230.5</td>
     </tr>
     <tr>
-      <td>智谱 GLM4-9B</td>
+      <td>GLM4-9B</td>
       <td>86</td>
       <td>49</td>
       <td>67</td>
       <td>202</td>
     </tr>
     <tr>
-      <td>Mistral Mixtral 8x22B</td>
+      <td>Mixtral 8x22B</td>
       <td>77.5</td>
       <td>21</td>
       <td>86.5</td>
@@ -79,7 +79,7 @@
   </tbody>
 </table>
 
-根据当前测评的三门考卷的汇总分数看，斩获前三名的模型分别是：阿里巴巴 千问2-72B、OpenAI GPT-4o和上海人工智能实验室书生·浦语-文曲星-20B，它们的总分是303、296、295.5，对应得分率分别是72.1%、70.5%和70.4%。
+根据当前测评的三门考卷的汇总分数看，斩获前三名的模型分别是：阿里巴巴 千问2-72B、OpenAI GPT-4o和上海人工智能实验室 书生·浦语-文曲星-20B，它们的总分是303、296、295.5，对应得分率分别是72.1%、70.5%和70.4%。
 分学科而言，
 - 英语最简单，参加考试的大模型平均可以获得97分（满分120分），GPT-4o甚至获得了111.5的高分；
 - 数学是“噩梦”，尽管有的大模型可以在8个单选题中做对7个，但如果评测考虑简答题，没有任何一个大模型能够及格。数学考得最好的模型来自于上海人工智能实验室，其高考数学分数为75分（满分150），也只能获得50%的高考数学分数
@@ -105,7 +105,7 @@
       <td>总分（满分150）</td>
     </tr>
     <tr>
-      <td>阿里 千问2-72B</td>
+      <td>千问2-72B</td>
       <td>31</td>
       <td>19</td>
       <td>9</td>
@@ -115,7 +115,7 @@
       <td>124</td>
     </tr>
     <tr>
-      <td>上海人工智能实验室 书生·浦语-文曲星-20B</td>
+      <td>书生·浦语-文曲星-20B</td>
       <td>30</td>
       <td>17</td>
       <td>6</td>
@@ -125,7 +125,7 @@
       <td>112</td>
     </tr>
     <tr>
-      <td>OpenAI GPT-4o</td>
+      <td>GPT-4o</td>
       <td>32</td>
       <td>10</td>
       <td>8</td>
@@ -135,7 +135,7 @@
       <td>111.5</td>
     </tr>
     <tr>
-      <td>阿里 千问2-57B</td>
+      <td>千问2-57B</td>
       <td>27</td>
       <td>12</td>
       <td>7</td>
@@ -145,7 +145,7 @@
       <td>99.5</td>
     </tr>        
     <tr>
-      <td>零一万物 Yi-1.5-34B</td>
+      <td>Yi-1.5-34B</td>
       <td>28</td>
       <td>8</td>
       <td>5</td>
@@ -155,7 +155,7 @@
       <td>97</td>
     </tr>
     <tr>
-      <td>智谱 GLM4-9B</td>
+      <td>GLM4-9B</td>
       <td>21</td>
       <td>6</td>
       <td>8</td>
@@ -165,7 +165,7 @@
       <td>86</td>
     </tr>
     <tr>
-      <td>Mistral Mixtral 8x22B</td>
+      <td>Mixtral 8x22B</td>
       <td>18</td>
       <td>3</td>
       <td>7</td>
@@ -186,7 +186,7 @@
         <th rowspan="2">语文</th>
         <th rowspan="2">题号</th>
 <th colspan="5">现代文阅读Ⅰ</th><th colspan="4">现代文阅读ⅠⅠ</th><th colspan="5">文言文阅读</th><th colspan="2">古诗文阅读</th><th colspan="1">名篇名句默写</th><th colspan="5">语言文字运用</th><th colspan="1">作文</th><th rowspan="2">总分</th></tr>
-<tr><th>1.1</th><th>1.2</th><th>1.3</th><th>1.4</th><th>1.5</th><th>2.1</th><th>2.2</th><th>2.3</th><th>2.4</th><th>3.1</th><th>3.2</th><th>3.3</th><th>3.4</th><th>3.5</th><th>4.1</th><th>4.2</th><th>5.0</th><th>6.1</th><th>6.2</th><th>6.3</th><th>6.4</th><th>6.5</th><th>7.0</th></tr><tr><td>测试模型</td><td>分值</td><td>3.0</td><td>3.0</td><td>3.0</td><td>4.0</td><td>6.0</td><td>3.0</td><td>3.0</td><td>4.0</td><td>6.0</td><td>3.0</td><td>3.0</td><td>3.0</td><td>8.0</td><td>5.0</td><td>3.0</td><td>6.0</td><td>6.0</td><td>5.0</td><td>2.0</td><td>4.0</td><td>4.0</td><td>3.0</td><td>60.0</td><td>150.0(100%)</td></tr><tr><td>阿里 千问2-72B</td><td></td><td>3.0</td><td>3.0</td><td>3.0</td><td>4.0</td><td>5.0</td><td>3.0</td><td>3.0</td><td>3.0</td><td>4.0</td><td>2.0</td><td>3.0</td><td>3.0</td><td>6.0</td><td>5.0</td><td>3.0</td><td>6.0</td><td>6.0</td><td>0.0</td><td>1.0</td><td>1.0</td><td>4.0</td><td>3.0</td><td>50.0</td><td>124.0(82.6%)</td></tr><tr><td>上海人工智能实验室 书生·浦语-文曲星-20B	</td><td></td><td>3.0</td><td>3.0</td><td>3.0</td><td>3.0</td><td>4.0</td><td>3.0</td><td>3.0</td><td>3.0</td><td>5.0</td><td>3.0</td><td>0.0</td><td>3.0</td><td>7.0</td><td>4.0</td><td>3.0</td><td>3.0</td><td>6.0</td><td>0.0</td><td>2.0</td><td>2.0</td><td>2.0</td><td>1.0</td><td>46.0</td><td>112.0(74.6%)</td></tr><tr><td>OpenAI GPT-4o	</td><td></td><td>3.0</td><td>3.0</td><td>3.0</td><td>3.0</td><td>6.0</td><td>3.0</td><td>3.0</td><td>4.0</td><td>4.0</td><td>0.0</td><td>0.0</td><td>0.0</td><td>5.0</td><td>5.0</td><td>3.0</td><td>5.0</td><td>2.0</td><td>0.0</td><td>2.0</td><td>0.0</td><td>4.0</td><td>3.0</td><td>50.5</td><td>111.5(74.3%)</td></tr><tr><td>阿里 千问2-57B	</td><td></td><td>3.0</td><td>3.0</td><td>3.0</td><td>2.0</td><td>3.0</td><td>3.0</td><td>3.0</td><td>2.0</td><td>5.0</td><td>2.0</td><td>0.0</td><td>3.0</td><td>5.0</td><td>2.0</td><td>3.0</td><td>4.0</td><td>6.0</td><td>0.0</td><td>1.0</td><td>0.0</td><td>0.0</td><td>1.0</td><td>45.5</td><td>99.5(66.3%)</td></tr><tr><td>零一万物 Yi-1.5-34B	</td><td></td><td>3.0</td><td>3.0</td><td>3.0</td><td>2.0</td><td>5.0</td><td>3.0</td><td>3.0</td><td>2.0</td><td>4.0</td><td>2.0</td><td>0.0</td><td>0.0</td><td>4.0</td><td>2.0</td><td>3.0</td><td>2.0</td><td>2.0</td><td>0.0</td><td>0.0</td><td>0.0</td><td>2.0</td><td>2.0</td><td>50.0</td><td>97.0(64.7%)</td></tr><tr><td>智谱 GLM4-9B	</td><td></td><td>3.0</td><td>3.0</td><td>0.0</td><td>1.0</td><td>0.0</td><td>3.0</td><td>3.0</td><td>4.0</td><td>4.0</td><td>0.0</td><td>0.0</td><td>0.0</td><td>4.0</td><td>2.0</td><td>3.0</td><td>5.0</td><td>6.0</td><td>0.0</td><td>1.0</td><td>0.0</td><td>0.0</td><td>3.0</td><td>41.0</td><td>86.0(57.3%)</td></tr><tr><td>Mistral Mixtral 8x22B</td><td></td><td>0.0</td><td>3.0</td><td>0.0</td><td>1.0</td><td>6.0</td><td>3.0</td><td>0.0</td><td>2.0</td><td>3.0</td><td>0.0</td><td>0.0</td><td>0.0</td><td>2.0</td><td>1.0</td><td>3.0</td><td>4.0</td><td>2.0</td><td>0.0</td><td>0.0</td><td>0.0</td><td>0.0</td><td>3.0</td><td>44.5</td><td>77.5(51.7%)</td></tr></table>
+<tr><th>1.1</th><th>1.2</th><th>1.3</th><th>1.4</th><th>1.5</th><th>2.1</th><th>2.2</th><th>2.3</th><th>2.4</th><th>3.1</th><th>3.2</th><th>3.3</th><th>3.4</th><th>3.5</th><th>4.1</th><th>4.2</th><th>5.0</th><th>6.1</th><th>6.2</th><th>6.3</th><th>6.4</th><th>6.5</th><th>7.0</th></tr><tr><td>测试模型</td><td>分值</td><td>3.0</td><td>3.0</td><td>3.0</td><td>4.0</td><td>6.0</td><td>3.0</td><td>3.0</td><td>4.0</td><td>6.0</td><td>3.0</td><td>3.0</td><td>3.0</td><td>8.0</td><td>5.0</td><td>3.0</td><td>6.0</td><td>6.0</td><td>5.0</td><td>2.0</td><td>4.0</td><td>4.0</td><td>3.0</td><td>60.0</td><td>150.0(100%)</td></tr><tr><td>千问2-72B</td><td></td><td>3.0</td><td>3.0</td><td>3.0</td><td>4.0</td><td>5.0</td><td>3.0</td><td>3.0</td><td>3.0</td><td>4.0</td><td>2.0</td><td>3.0</td><td>3.0</td><td>6.0</td><td>5.0</td><td>3.0</td><td>6.0</td><td>6.0</td><td>0.0</td><td>1.0</td><td>1.0</td><td>4.0</td><td>3.0</td><td>50.0</td><td>124.0(82.6%)</td></tr><tr><td>书生·浦语-文曲星-20B	</td><td></td><td>3.0</td><td>3.0</td><td>3.0</td><td>3.0</td><td>4.0</td><td>3.0</td><td>3.0</td><td>3.0</td><td>5.0</td><td>3.0</td><td>0.0</td><td>3.0</td><td>7.0</td><td>4.0</td><td>3.0</td><td>3.0</td><td>6.0</td><td>0.0</td><td>2.0</td><td>2.0</td><td>2.0</td><td>1.0</td><td>46.0</td><td>112.0(74.6%)</td></tr><tr><td>GPT-4o	</td><td></td><td>3.0</td><td>3.0</td><td>3.0</td><td>3.0</td><td>6.0</td><td>3.0</td><td>3.0</td><td>4.0</td><td>4.0</td><td>0.0</td><td>0.0</td><td>0.0</td><td>5.0</td><td>5.0</td><td>3.0</td><td>5.0</td><td>2.0</td><td>0.0</td><td>2.0</td><td>0.0</td><td>4.0</td><td>3.0</td><td>50.5</td><td>111.5(74.3%)</td></tr><tr><td>千问2-57B	</td><td></td><td>3.0</td><td>3.0</td><td>3.0</td><td>2.0</td><td>3.0</td><td>3.0</td><td>3.0</td><td>2.0</td><td>5.0</td><td>2.0</td><td>0.0</td><td>3.0</td><td>5.0</td><td>2.0</td><td>3.0</td><td>4.0</td><td>6.0</td><td>0.0</td><td>1.0</td><td>0.0</td><td>0.0</td><td>1.0</td><td>45.5</td><td>99.5(66.3%)</td></tr><tr><td>Yi-1.5-34B	</td><td></td><td>3.0</td><td>3.0</td><td>3.0</td><td>2.0</td><td>5.0</td><td>3.0</td><td>3.0</td><td>2.0</td><td>4.0</td><td>2.0</td><td>0.0</td><td>0.0</td><td>4.0</td><td>2.0</td><td>3.0</td><td>2.0</td><td>2.0</td><td>0.0</td><td>0.0</td><td>0.0</td><td>2.0</td><td>2.0</td><td>50.0</td><td>97.0(64.7%)</td></tr><tr><td>GLM4-9B	</td><td></td><td>3.0</td><td>3.0</td><td>0.0</td><td>1.0</td><td>0.0</td><td>3.0</td><td>3.0</td><td>4.0</td><td>4.0</td><td>0.0</td><td>0.0</td><td>0.0</td><td>4.0</td><td>2.0</td><td>3.0</td><td>5.0</td><td>6.0</td><td>0.0</td><td>1.0</td><td>0.0</td><td>0.0</td><td>3.0</td><td>41.0</td><td>86.0(57.3%)</td></tr><tr><td>Mixtral 8x22B</td><td></td><td>0.0</td><td>3.0</td><td>0.0</td><td>1.0</td><td>6.0</td><td>3.0</td><td>0.0</td><td>2.0</td><td>3.0</td><td>0.0</td><td>0.0</td><td>0.0</td><td>2.0</td><td>1.0</td><td>3.0</td><td>4.0</td><td>2.0</td><td>0.0</td><td>0.0</td><td>0.0</td><td>0.0</td><td>3.0</td><td>44.5</td><td>77.5(51.7%)</td></tr></table>
 
 
 ## 数学
@@ -210,7 +210,7 @@
       <td>总分（满分150）</td>
     </tr>
     <tr>
-      <td>上海人工智能实验室 书生·浦语-文曲星-20B</td>
+      <td>书生·浦语-文曲星-20B</td>
       <td>30</td>
       <td>9</td>
       <td>10</td>
@@ -218,7 +218,7 @@
       <td>75</td>
     </tr>
     <tr>
-      <td>OpenAI GPT-4o</td>
+      <td>GPT-4o</td>
       <td>35</td>
       <td>6</td>
       <td>10</td>
@@ -226,7 +226,7 @@
       <td>73</td>
     </tr>
     <tr>
-      <td>阿里 千问2-72B</td>
+      <td>千问2-72B</td>
       <td>30</td>
       <td>12</td>
       <td>10</td>
@@ -234,7 +234,7 @@
       <td>70</td>
     </tr>
     <tr>
-      <td>阿里千问2 57B</td>
+      <td>千问2 57B</td>
       <td>35</td>
       <td>9</td>
       <td>5</td>
@@ -242,7 +242,7 @@
       <td>58</td>
     </tr>
     <tr>
-      <td>智谱 GLM4-9B</td>
+      <td>GLM4-9B</td>
       <td>30</td>
       <td>7</td>
       <td>0</td>
@@ -250,7 +250,7 @@
       <td>49</td>
     </tr>
     <tr>
-      <td>零一万物 Yi-1.5-34B</td>
+      <td>Yi-1.5-34B</td>
       <td>20</td>
       <td>5</td>
       <td>0</td>
@@ -258,7 +258,7 @@
       <td>29</td>
     </tr>
     <tr>
-      <td>Mistral Mixtral 8x22B</td>
+      <td>Mixtral 8x22B</td>
       <td>10</td>
       <td>0</td>
       <td>0</td>
@@ -268,7 +268,7 @@
   </tbody>
 </table>
 
-数学是所有大模型得分率最低的学科。尤其值得注意的是，数学问答题对所有大模型都是巨大的挑战，五道问答题平均得分率仅为18.9%，根据本次测评得分，上海人工智能实验室书生·浦语-文曲星-20B模型获得了该项最具挑战的题型的最高得分率——33.8%。目前评测的所有模型中，没有任何一个模型对任何一道大题被完整地做对完全做对，较好的大模型可以答对第一问以及后面问题的小部分。
+数学是所有大模型得分率最低的学科。尤其值得注意的是，数学问答题对所有大模型都是巨大的挑战，五道问答题平均得分率仅为18.9%，根据本次测评得分，书生·浦语-文曲星-20B模型获得了该项最具挑战的题型的最高得分率——33.8%。目前评测的所有模型中，没有任何一个模型对任何一道大题被完整地做对完全做对，较好的大模型可以答对第一问以及后面问题的小部分。
 
 
 各个具体的小题得分情况如下所示
@@ -279,7 +279,7 @@
         <th rowspan="2">数学</th>
         <th rowspan="2">题号</th>
 <th colspan="8">单选题</th><th colspan="3">多选题</th><th colspan="3">填空题</th><th colspan="5">简答题</th><th rowspan="2">总分</th></tr>
-<tr><th>1</th><th>2</th><th>3</th><th>4</th><th>5</th><th>6</th><th>7</th><th>8</th><th>9</th><th>10</th><th>11</th><th>12</th><th>13</th><th>14</th><th>15</th><th>16</th><th>17</th><th>18</th><th>19</th></tr><tr><td>测试模型</td><td>分值</td><td>5</td><td>5</td><td>5</td><td>5</td><td>5</td><td>5</td><td>5</td><td>5</td><td>6</td><td>6</td><td>6</td><td>5</td><td>5</td><td>5</td><td>13</td><td>15</td><td>15</td><td>17</td><td>17</td><td>150(100%)</td></tr><tr><td>上海人工智能实验室 书生·浦语-文曲星-20B	</td><td></td><td>5</td><td>0</td><td>5</td><td>5</td><td>5</td><td>5</td><td>5</td><td>0</td><td>0</td><td>3</td><td>6</td><td>0</td><td>5</td><td>5</td><td>9</td><td>9</td><td>1</td><td>6</td><td>1</td><td>75(50.0%)</td></tr><tr><td>OpenAI GPT-4o	</td><td></td><td>5</td><td>5</td><td>5</td><td>5</td><td>5</td><td>5</td><td>5</td><td>0</td><td>0</td><td>0</td><td>6</td><td>5</td><td>5</td><td>0</td><td>6</td><td>7</td><td>5</td><td>3</td><td>1</td><td>73(48.7%)</td></tr><tr><td>阿里 千问2-72B</td><td></td><td>5</td><td>0</td><td>5</td><td>5</td><td>5</td><td>5</td><td>5</td><td>0</td><td>0</td><td>6</td><td>6</td><td>5</td><td>5</td><td>0</td><td>7</td><td>7</td><td>0</td><td>3</td><td>1</td><td>70(46.7%)</td></tr><tr><td>阿里 千问2-57B	</td><td></td><td>5</td><td>5</td><td>5</td><td>0</td><td>5</td><td>5</td><td>5</td><td>5</td><td>3</td><td>0</td><td>6</td><td>0</td><td>5</td><td>0</td><td>1</td><td>5</td><td>1</td><td>2</td><td>0</td><td>58(38.7%)</td></tr><tr><td>智谱 GLM4-9B	</td><td></td><td>5</td><td>0</td><td>5</td><td>5</td><td>5</td><td>5</td><td>5</td><td>0</td><td>0</td><td>3</td><td>4</td><td>0</td><td>0</td><td>0</td><td>1</td><td>7</td><td>2</td><td>1</td><td>1</td><td>49(32.7%)</td></tr><tr><td>零一万物 Yi-1.5-34B	</td><td></td><td>5</td><td>0</td><td>0</td><td>5</td><td>0</td><td>5</td><td>5</td><td>0</td><td>3</td><td>0</td><td>2</td><td>0</td><td>0</td><td>0</td><td>0</td><td>1</td><td>0</td><td>3</td><td>0</td><td>29(19.3%)</td></tr><tr><td>Mistral Mixtral 8x22B</td><td></td><td>5</td><td>0</td><td>5</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>6</td><td>0</td><td>0</td><td>5</td><td>0</td><td>21(14.0%)</td></tr></table>
+<tr><th>1</th><th>2</th><th>3</th><th>4</th><th>5</th><th>6</th><th>7</th><th>8</th><th>9</th><th>10</th><th>11</th><th>12</th><th>13</th><th>14</th><th>15</th><th>16</th><th>17</th><th>18</th><th>19</th></tr><tr><td>测试模型</td><td>分值</td><td>5</td><td>5</td><td>5</td><td>5</td><td>5</td><td>5</td><td>5</td><td>5</td><td>6</td><td>6</td><td>6</td><td>5</td><td>5</td><td>5</td><td>13</td><td>15</td><td>15</td><td>17</td><td>17</td><td>150(100%)</td></tr><tr><td>书生·浦语-文曲星-20B	</td><td></td><td>5</td><td>0</td><td>5</td><td>5</td><td>5</td><td>5</td><td>5</td><td>0</td><td>0</td><td>3</td><td>6</td><td>0</td><td>5</td><td>5</td><td>9</td><td>9</td><td>1</td><td>6</td><td>1</td><td>75(50.0%)</td></tr><tr><td>OpenAI GPT-4o	</td><td></td><td>5</td><td>5</td><td>5</td><td>5</td><td>5</td><td>5</td><td>5</td><td>0</td><td>0</td><td>0</td><td>6</td><td>5</td><td>5</td><td>0</td><td>6</td><td>7</td><td>5</td><td>3</td><td>1</td><td>73(48.7%)</td></tr><tr><td>千问2-72B</td><td></td><td>5</td><td>0</td><td>5</td><td>5</td><td>5</td><td>5</td><td>5</td><td>0</td><td>0</td><td>6</td><td>6</td><td>5</td><td>5</td><td>0</td><td>7</td><td>7</td><td>0</td><td>3</td><td>1</td><td>70(46.7%)</td></tr><tr><td>千问2-57B	</td><td></td><td>5</td><td>5</td><td>5</td><td>0</td><td>5</td><td>5</td><td>5</td><td>5</td><td>3</td><td>0</td><td>6</td><td>0</td><td>5</td><td>0</td><td>1</td><td>5</td><td>1</td><td>2</td><td>0</td><td>58(38.7%)</td></tr><tr><td>GLM4-9B	</td><td></td><td>5</td><td>0</td><td>5</td><td>5</td><td>5</td><td>5</td><td>5</td><td>0</td><td>0</td><td>3</td><td>4</td><td>0</td><td>0</td><td>0</td><td>1</td><td>7</td><td>2</td><td>1</td><td>1</td><td>49(32.7%)</td></tr><tr><td>Yi-1.5-34B	</td><td></td><td>5</td><td>0</td><td>0</td><td>5</td><td>0</td><td>5</td><td>5</td><td>0</td><td>3</td><td>0</td><td>2</td><td>0</td><td>0</td><td>0</td><td>0</td><td>1</td><td>0</td><td>3</td><td>0</td><td>29(19.3%)</td></tr><tr><td>Mixtral 8x22B</td><td></td><td>5</td><td>0</td><td>5</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>6</td><td>0</td><td>0</td><td>5</td><td>0</td><td>21(14.0%)</td></tr></table>
 
 ## 英语
 英语考试中的听力部分（分值30分）不纳入此次评测。
@@ -303,7 +303,7 @@
       <td>总分（满分120）</td>
     </tr>
     <tr>
-      <td>OpenAI GPT-4o</td>
+      <td>GPT-4o</td>
       <td>37.5</td>
       <td>10</td>
       <td>14</td>
@@ -312,7 +312,7 @@
       <td>111.5</td>
     </tr>
     <tr>
-      <td>阿里 千问2-72B</td>
+      <td>千问2-72B</td>
       <td>35</td>
       <td>12.5</td>
       <td>14</td>
@@ -321,7 +321,7 @@
       <td>109</td>
     </tr>
     <tr>
-      <td>上海人工智能实验室 书生·浦语-文曲星-20B</td>
+      <td>书生·浦语-文曲星-20B</td>
       <td>37.5</td>
       <td>10</td>
       <td>15</td>
@@ -330,7 +330,7 @@
       <td>108.5</td>
     </tr>
     <tr>
-      <td>零一万物 Yi-1.5-34B</td>
+      <td>Yi-1.5-34B</td>
       <td>35</td>
       <td>10</td>
       <td>11</td>
@@ -339,7 +339,7 @@
       <td>104.5</td>
     </tr>
     <tr>
-      <td>阿里千问2 57B</td>
+      <td>千问2 57B</td>
       <td>35</td>
       <td>10</td>
       <td>9</td>
@@ -348,7 +348,7 @@
       <td>96.5</td>
     </tr>
     <tr>
-      <td>Mistral Mixtral 8x22B</td>
+      <td>Mixtral 8x22B</td>
       <td>37.5</td>
       <td>5</td>
       <td>2</td>
@@ -357,7 +357,7 @@
       <td>86.5</td>
     </tr>
     <tr>
-      <td>智谱 GLM4-9B</td>
+      <td>GLM4-9B</td>
       <td>35</td>
       <td>0</td>
       <td>6</td>
@@ -377,7 +377,7 @@ GPT-4o摘得了英语科目的第一名，并且有阅卷老师高度赞赏GPT-4
         <th rowspan="2">英语</th>
         <th rowspan="2">题号</th>
 <th colspan="4">阅读理解</th><th colspan="1">7选5</th><th colspan="1">完形填空</th><th colspan="1">语法</th><th colspan="1">小作文</th><th colspan="1">大作文</th><th rowspan="2">总分</th></tr>
-<tr><th>1</th><th>2</th><th>3</th><th>4</th><th>5</th><th>6</th><th>7</th><th>8</th><th>9</th></tr><tr><td>测试模型</td><td>分值</td><td>7.5</td><td>10.0</td><td>10.0</td><td>10.0</td><td>12.5</td><td>15.0</td><td>15.0</td><td>15.0</td><td>25.0</td><td>120.0(100%)</td></tr><tr><td>OpenAI GPT-4o	</td><td></td><td>7.5</td><td>10.0</td><td>10.0</td><td>10.0</td><td>10.0</td><td>14.0</td><td>15.0</td><td>12.0</td><td>23.0</td><td>111.5(92.9%)</td></tr><tr><td>阿里 千问2-72B</td><td></td><td>7.5</td><td>10.0</td><td>10.0</td><td>7.5</td><td>12.5</td><td>14.0</td><td>13.5</td><td>13.5</td><td>20.5</td><td>109.0(90.8%)</td></tr><tr><td>上海人工智能实验室 书生·浦语-文曲星-20B	</td><td></td><td>7.5</td><td>10.0</td><td>10.0</td><td>10.0</td><td>10.0</td><td>15.0</td><td>13.5</td><td>12.5</td><td>20.0</td><td>108.5(90.4%)</td></tr><tr><td>零一万物 Yi-1.5-34B	</td><td></td><td>7.5</td><td>10.0</td><td>10.0</td><td>7.5</td><td>10.0</td><td>11.0</td><td>13.5</td><td>13.0</td><td>22.0</td><td>104.5(87.1%)</td></tr><tr><td>阿里 千问2-57B	</td><td></td><td>7.5</td><td>10.0</td><td>7.5</td><td>10.0</td><td>10.0</td><td>9.0</td><td>15.0</td><td>12.0</td><td>15.5</td><td>96.5(80.4%)</td></tr><tr><td>Mistral Mixtral 8x22B</td><td></td><td>7.5</td><td>10.0</td><td>10.0</td><td>10.0</td><td>5.0</td><td>2.0</td><td>9.0</td><td>11.5</td><td>21.5</td><td>86.5(72.1%)</td></tr><tr><td>智谱 GLM4-9B	</td><td></td><td>7.5</td><td>10.0</td><td>10.0</td><td>7.5</td><td>0.0</td><td>6.0</td><td>6.0</td><td>5.0</td><td>15.0</td><td>67.0(55.8%)</td></tr></table>
+<tr><th>1</th><th>2</th><th>3</th><th>4</th><th>5</th><th>6</th><th>7</th><th>8</th><th>9</th></tr><tr><td>测试模型</td><td>分值</td><td>7.5</td><td>10.0</td><td>10.0</td><td>10.0</td><td>12.5</td><td>15.0</td><td>15.0</td><td>15.0</td><td>25.0</td><td>120.0(100%)</td></tr><tr><td>OpenAI GPT-4o	</td><td></td><td>7.5</td><td>10.0</td><td>10.0</td><td>10.0</td><td>10.0</td><td>14.0</td><td>15.0</td><td>12.0</td><td>23.0</td><td>111.5(92.9%)</td></tr><tr><td>千问2-72B</td><td></td><td>7.5</td><td>10.0</td><td>10.0</td><td>7.5</td><td>12.5</td><td>14.0</td><td>13.5</td><td>13.5</td><td>20.5</td><td>109.0(90.8%)</td></tr><tr><td>书生·浦语-文曲星-20B	</td><td></td><td>7.5</td><td>10.0</td><td>10.0</td><td>10.0</td><td>10.0</td><td>15.0</td><td>13.5</td><td>12.5</td><td>20.0</td><td>108.5(90.4%)</td></tr><tr><td>Yi-1.5-34B	</td><td></td><td>7.5</td><td>10.0</td><td>10.0</td><td>7.5</td><td>10.0</td><td>11.0</td><td>13.5</td><td>13.0</td><td>22.0</td><td>104.5(87.1%)</td></tr><tr><td>千问2-57B	</td><td></td><td>7.5</td><td>10.0</td><td>7.5</td><td>10.0</td><td>10.0</td><td>9.0</td><td>15.0</td><td>12.0</td><td>15.5</td><td>96.5(80.4%)</td></tr><tr><td>Mixtral 8x22B</td><td></td><td>7.5</td><td>10.0</td><td>10.0</td><td>10.0</td><td>5.0</td><td>2.0</td><td>9.0</td><td>11.5</td><td>21.5</td><td>86.5(72.1%)</td></tr><tr><td>GLM4-9B	</td><td></td><td>7.5</td><td>10.0</td><td>10.0</td><td>7.5</td><td>0.0</td><td>6.0</td><td>6.0</td><td>5.0</td><td>15.0</td><td>67.0(55.8%)</td></tr></table>
 
 ## 老师整体点评
 在改完所有的科目之后，我们告知了以上试卷的回答由大模型生成，然后我们邀请阅卷老师对7个大模型整体的表现进行了点评。
@@ -407,7 +407,7 @@ GPT-4o摘得了英语科目的第一名，并且有阅卷老师高度赞赏GPT-4
  
 诗中以对比的方式,对泉声进行了生动的描写,请结合相关内容简要赏析。(6分)
 ```
-模型输出（模型：阿里巴巴 千问2-70B）：
+模型输出（模型：千问2-70B）：
 ```
 【小题1】选项D的解读有误。诗人提到“君看昔日兰亭帖,亦把湍流替管弦”，并非意味着他和兰亭诸贤一样摒弃了乐器，而是用典故表达了对自然之音的欣赏，认为自然界的流水声可以替代乐器发出的音乐，达到同样的审美效果。因此，选项D的表述“都把对音乐之美的追求寄托于山水而摒弃了乐器”并不准确。
 【小题2】诗中通过对比的方式，对泉声进行了生动的描绘，具体体现在以下几个方面：
@@ -429,7 +429,7 @@ _____
 (2) 若  $\triangle A B C$  的面积 $3+\sqrt{3}
 $, 求 $c$。
 ```
-模型输出（模型：上海人工智能实验室 书生·浦语-文曲星-20B）：
+模型输出（模型：书生·浦语-文曲星-20B）：
 ```latex
 首先，我们有两个关于三角形$ABC$的条件：
 
