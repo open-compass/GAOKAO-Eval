@@ -6,7 +6,7 @@
 ```
 results/
 ├────── README.md      # 测试说明
-├────── 新课标I卷/       # 每种高考卷类型创建一个文件夹
+├────── 新课标卷/       # 每种高考卷类型创建一个文件夹
 │       ├── README.md   # 对应高考卷的分数汇总
 │       ├── 数学/       # 各种模型的生成结果
 │       │   ├── 新课标Ⅰ数学_Mixtral-8x22B-Instruct-v0.1.ipynb
@@ -22,6 +22,7 @@ results/
 ```
 
 ## 题目示例
+### 数学公式
 将题目输入到大模型中之前，我们会将输入转换为文本形式，如果是数学题这种有公式的情况，我们会使用 Latex 的格式进行表示，例如下图的题目
 
 ![image](https://github.com/OpenMOSS/CoLLiE/assets/65400838/2ad7393b-a93b-4ebf-a5d6-a81d5f9e4162)
@@ -36,6 +37,95 @@ results/
 ```
 
 在推理时，每个模型的`max_new_token`都被设置为了`2048`，并且除语文、英语作文以外都使用`贪婪解码`策略。
+
+### 题目图片
+
+对于带有图片的多模态考题,题目中的图片是以 HTML 格式嵌入的，例如：
+
+体育课上两位同学在室内羽毛球场进行羽毛球比赛，羽毛球在空中上升的运动轨迹如图中虚线所示，考虑空气阻力，羽毛球加速度方向示意图可能正确的是（ ）
+- A: `<img alt="" height="59px" src="data/img/0_0.png" style="vertical-align:middle;" width="149px"/>`
+- B: `<img alt="" height="57px" src="data/img/0_1.png" style="vertical-align:middle;" width="130px"/>`
+- C: `<img alt="" height="65px" src="data/img/0_2.png" style="vertical-align:middle;" width="144px"/>`
+- D: `<img alt="" height="56px" src="data/img/0_3.png" style="vertical-align:middle;" width="140px"/>`
+
+脚本将会提取这些图片并将它们显示在一张合成图片中。在合成图片中，我们将对应的位置标记为 `<IMAGE i>`，并将问题中原有的图片替换为 `<IMAGE i>`。如下图所示:
+
+体育课上两位同学在室内羽毛球场进行羽毛球比赛，羽毛球在空中上升的运动轨迹如图中虚线所示，考虑空气阻力，羽毛球加速度方向示意图可能正确的是（ ）
+
+- A: `<IMAGE 0>` 
+- B: `<IMAGE 1>` 
+- C: `<IMAGE 2>` 
+- D: `<IMAGE 3>`
+
+<img src="https://ks-1302698447.cos.ap-shanghai.myqcloud.com/img/phymerge.png" alt="web_ui_wqx_2" style="zoom:100%;" />
+
+
+```python
+import urllib.request
+import shutil
+import re
+from PIL import Image, ImageDraw, ImageFont
+import matplotlib.pyplot as plt
+
+
+def img_process(im_list):
+    imgs = []
+    for p in im_list:
+        try:
+            imgs.append(Image.open(p))
+        except:
+            return -1
+    new_w = 0
+    new_h = 0
+    for im in imgs:
+        w, h = im.size
+        new_w = max(new_w, w)
+        new_h += h + 20
+    new_w += 20
+    new_h += 20
+    pad = max(new_w // 4, 100)
+    font = ImageFont.truetype("src/fonts/SimHei font.ttf", pad // 5)
+    new_img = Image.new('RGB', (new_w + pad, new_h), 'white')
+    draw = ImageDraw.Draw(new_img)
+    curr_h = 10
+    for idx, im in enumerate(imgs):
+        w, h = im.size
+        new_img.paste(im, (pad, curr_h))
+        draw.text((0, curr_h + h // 2), f'<IMAGE {idx}>', font=font, fill='black')
+        if idx + 1 < len(imgs):
+            draw.line([(0, curr_h + h + 10), (new_w + pad, curr_h + h + 10)], fill='black', width=2)
+        curr_h += h + 20
+    # 展示处理后的图片
+    plt.imshow(new_img)
+    plt.title("Processed Image")
+    plt.show()
+    return new_img
+
+
+sample = questions[0]  # 选择一个样本进行展示
+question = sample['q_main']
+mid_prompt = question
+
+pattern_img_tag = re.compile(r'<img alt=.*?"/>')
+pattern_src = re.compile(r'src=".*?"')
+
+imgs = pattern_img_tag.findall(mid_prompt)
+im_list = []
+if len(imgs) == 0:
+    img = None
+else:
+    for i, img in enumerate(imgs):
+        mid_prompt = mid_prompt.replace(img, f'<IMAGE {i}> ', 1)
+        img = pattern_src.findall(img)[0].split('"')[1]
+        if img.startswith("data/img/"):  # 本地路径
+            shutil.copy(img, f"data/img_cache/sample_{i}.png")
+        else:  # URL
+            urllib.request.urlretrieve(img, f"data/img_cache/sample_{i}.png")
+        im_list.append(f"data/img_cache/sample_{i}.png")
+# 处理和展示图片
+processed_img = img_process(im_list)
+```
+
 
 
 ## Jupyter Notebook 记录过程

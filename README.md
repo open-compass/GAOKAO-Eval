@@ -24,6 +24,8 @@
 
 > **此外，我们也注意到，不同的高考试卷对大模型存在较大的分数随机性，因此不同省市的分数或排名可能出现明显变化。**
 
+> **注意，这个测评仅能评估大型语言模型在高考题目上的表现，不能全面评估模型的能力，因此高考分数的排名不能体现模型使用体验的好坏或者能力的高低。**
+
 
 
 # 高考试卷类型
@@ -38,7 +40,7 @@
 |           上海卷                           | 上海市  |
 |            天津卷                     |  天津市 |
 
-其中北京卷、上海卷、天津卷、全国甲卷涵盖所有学科，使用新课标I卷、新课标II卷的省市使用对应的语数外试卷，大部分省市非语数外的科目自主命题。在GAOKAO-Eval中，我们主要测试新课标I卷、上海市的语数外三门课程，全国甲卷、北京卷所有的课程。
+其中北京卷、上海卷、天津卷、全国甲卷涵盖所有学科，使用新课标I卷、新课标II卷的省市使用对应的语数外试卷，大部分省市非语数外的科目自主命题。在GAOKAO-Eval中，我们主要测试新课标I卷和全国甲卷所有的课程。
 
 高考模式方面，现行体系主要分为三大类：
 - **“3+1+2”新模式**，已被23个省份广泛采纳，此模式围绕语文、数学、外语三大基础学科构建，要求学生在物理与历史中择其一作为首选科目，并从剩余四科（思想政治、地理、化学、生物）中自由选择两科。
@@ -47,83 +49,305 @@
 
 # 成绩
 
-1. 新课标I卷（语、数、外）
-
+1. 新课标I卷
 <table border="1" class="dataframe">
   <thead>
-    <tr style="text-align: right;">
-      <th colspan="6"  style="text-align: center;">语数外得分情况</th>
+    <tr style="text-align: center;">
+      <th colspan="13" style="text-align: center;">新课标Ⅰ得分情况(按照理科总分排序)</th>
     </tr>
   </thead>
   <tbody>
-    <tr>
+    <tr style="text-align: center;">
       <td>模型</td>
       <td>研发机构</td>
-      <td>语文(满分150)</td>
-      <td>数学（满分150）</td>
-      <td>英语（满分120）</td>
-      <td>总分（满分420）</td>
+      <td>语文</td>
+      <td>数学</td>
+      <td>英语</td>
+      <td>物理</td>
+      <td>化学</td>
+      <td>生物</td>
+      <td>历史</td>
+      <td>地理</td>
+      <td>政治</td>
+      <td>理科总分</td>
+      <td>文科总分</td>
     </tr>
-    <tr>
-      <td>千问2-72B</td>
-      <td>阿里巴巴</td>
-      <td>124</td>
-      <td>70</td>
-      <td>109</td>
-      <td>303</td>
+    <tr style="text-align: center;">
+      <td>InternLM-WQX+VL-20B</td>
+      <td>上海人工智能实验室 & 商汤科技 联合研发</td>
+      <td>112</td>
+      <td>74</td>
+      <td>138.5</td>
+      <td>39</td>
+      <td>48</td>
+      <td>57</td>
+      <td>82</td>
+      <td>58</td>
+      <td>67</td>
+      <td>468.5</td>
+      <td>531.5</td>
     </tr>
-    <tr>
+      <tr style="text-align: center;">
       <td>GPT-4o</td>
       <td>OpenAI（美国）</td>
       <td>111.5</td>
       <td>73</td>
-      <td>111.5</td>
-      <td>296</td>
+      <td>141.5</td>
+      <td>36</td>
+      <td>40</td>
+      <td>65</td>
+      <td>88</td>
+      <td>59</td>
+      <td>58</td>
+      <td>467</td>
+      <td>531</td>
     </tr>
-    <tr>
-      <td>书生·浦语-文曲星-20B</td>
-      <td>上海人工智能实验室 & 商汤科技 联合研发</td>
-      <td>112</td>
-      <td>75</td>
-      <td>108.5</td>
-      <td>295.5</td>
+    <tr style="text-align: center;">
+      <td>Qwen2-72B纯文本</td>
+      <td>阿里巴巴</td>
+      <td>124</td>
+      <td>68</td>
+      <td>139</td>
+      <td>42</td>
+      <td>44</td>
+      <td>48</td>
+      <td>85</td>
+      <td>70</td>
+      <td>60</td>
+      <td>465</td>
+      <td>546</td>
     </tr>
-    <tr>
-      <td>千问2-57B</td>
+    <tr style="text-align: center;">
+      <td>Qwen2-72B+VL-7B</td>
+      <td>阿里巴巴</td>
+      <td>124</td>
+      <td>68</td>
+      <td>139</td>
+      <td>19</td>
+      <td>6</td>
+      <td>48</td>
+      <td>85</td>
+      <td>4</td>
+      <td>60</td>
+      <td>404</td>
+      <td>480</td>
+    </tr>
+    <tr style="text-align: center;">
+      <td>Yi-34B+VL-34B</td>
+      <td>零一万物</td>
+      <td>97</td>
+      <td>31</td>
+      <td>134.5</td>
+      <td>21</td>
+      <td>37</td>
+      <td>49</td>
+      <td>48</td>
+      <td>41</td>
+      <td>51</td>
+      <td>369.5</td>
+      <td>402.5</td>
+    </tr>
+    <tr style="text-align: center;">
+      <td>Qwen2-57B+VL-7B</td>
       <td>阿里巴巴</td>
       <td>99.5</td>
       <td>58</td>
-      <td>96.5</td>
-      <td>254</td>
+      <td>126.5</td>
+      <td>7</td>
+      <td>6</td>
+      <td>51</td>
+      <td>73</td>
+      <td>4</td>
+      <td>62</td>
+      <td>348</td>
+      <td>423</td>
     </tr>
-    <tr>
-      <td>Yi-1.5-34B</td>
-      <td>零一万物</td>
-      <td>97</td>
-      <td>29</td>
-      <td>104.5</td>
-      <td>230.5</td>
-    </tr>
-    <tr>
-      <td>GLM4-9B</td>
+    <tr style="text-align: center;">
+      <td>GLM4-9B+VL-9B</td>
       <td>智谱 AI</td>
       <td>86</td>
-      <td>49</td>
+      <td>48</td>
+      <td>97</td>
+      <td>18</td>
+      <td>27</td>
       <td>67</td>
-      <td>202</td>
+      <td>80</td>
+      <td>62</td>
+      <td>48</td>
+      <td>343</</td>
+      <td>421</td>
     </tr>
-    <tr>
+    <tr style="text-align: center;">
       <td>Mixtral 8x22B</td>
       <td>Mistral</td>
       <td>77.5</td>
       <td>21</td>
-      <td>86.5</td>
-      <td>185</td>
+      <td>116.5</td>
+      <td>25</td>
+      <td>35</td>
+      <td>46</td>
+      <td>54</td>
+      <td>56</td>
+      <td>38</td>
+      <td>321</td>
+      <td>363</td>
     </tr>
   </tbody>
 </table>
 
-各个模型具体的详细得分情况、模型输出，请参阅[新课标I卷结果](./results/新课标I卷/README.md)。
+如果模型名称中含有“+VL”的字样表明，涉及到图片的题目会使用相应的多模态版本模型进行推理；如果没有“+VL”的字样，则只进行不看图的纯文本推理。
+
+各个模型具体的详细得分情况、模型输出，请参阅[新课标I卷结果](./results/新课标/README.md)。
+
+2. 全国甲卷
+
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: center;">
+      <th colspan="13"  style="text-align: center;">全国甲卷得分情况(按照理科总分排序)</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr style="text-align: center;">
+      <td>模型</td>
+      <td>研发机构</td>
+      <td>语文</td>
+      <td>英语</td>
+      <td>数学（理）</td>
+      <td>物理</td>
+      <td>化学</td>
+      <td>生物</td>
+      <td>数学（文）</td>
+      <td>历史</td>
+      <td>地理</td>
+      <td>理科总分</td>
+      <td>文科总分(缺政治)</td>
+    </tr>
+    <tr style="text-align: center;">
+      <td>Qwen2-72B纯文本</td>
+      <td>阿里巴巴</td>
+      <td>128</td>
+      <td>141</td>
+      <td>89</td>
+      <td>32</td>
+      <td>48</td>
+      <td>50</td>
+      <td>95</td>
+      <td>71</td>
+      <td>81</td>
+      <td>488</td>
+      <td>516</td>
+    </tr>
+    <tr style="text-align: center;">
+      <td>GPT-4o</td>
+      <td>OpenAI（美国）</td>
+      <td>122</td>
+      <td>142.5</td>
+      <td>84</td>
+      <td>31</td>
+      <td>34</td>
+      <td>72</td>
+      <td>89</td>
+      <td>82</td>
+      <td>66</td>
+      <td>485.5</td>
+      <td>501.5</td>
+    </tr>
+    <tr style="text-align: center;">
+      <td>InternLM-WQX+VL-20B</td>
+      <td>上海人工智能实验室 & 商汤科技 联合研发</td>
+      <td>111</td>
+      <td>141</td>
+      <td>78</td>
+      <td>30</td>
+      <td>52</td>
+      <td>50</td>
+      <td>71</td>
+      <td>76</td>
+      <td>64</td>
+      <td>462</td>
+      <td>463</td>
+    </tr>
+    <tr style="text-align: center;">
+      <td>Qwen2-72B+VL-7B</td>
+      <td>阿里巴巴</td>
+      <td>128</td>
+      <td>141</td>
+      <td>89</td>
+      <td>22</td>
+      <td>22</td>
+      <td>50</td>
+      <td>95</td>
+      <td>71</td>
+      <td>34</td>
+      <td>452</td>
+      <td>469</td>
+    </tr>
+    <tr style="text-align: center;">
+      <td>Mixtral 8x22B</td>
+      <td>Mistral</td>
+      <td>92</td>
+      <td>142</td>
+      <td>58</td>
+      <td>38</td>
+      <td>39</td>
+      <td>54</td>
+      <td>53</td>
+      <td>74</td>
+      <td>74</td>
+      <td>423</td>
+      <td>435</td>
+    </tr>
+    <tr style="text-align: center;">
+      <td>GLM4-9B+VL-9B</td>
+      <td>智谱 AI</td>
+      <td>108</td>
+      <td>110.5</td>
+      <td>71</td>
+      <td>29</td>
+      <td>44</td>
+      <td>55</td>
+      <td>75</td>
+      <td>54</td>
+      <td>62</td>
+      <td>417.5</td>
+      <td>409.5</td>
+    </tr>
+    <tr style="text-align: center;">
+      <td>Qwen2-57B+VL-7B</td>
+      <td>阿里巴巴</td>
+      <td>108</td>
+      <td>141</td>
+      <td>65</td>
+      <td>6</td>
+      <td>22</td>
+      <td>44</td>
+      <td>75</td>
+      <td>77</td>
+      <td>30</td>
+      <td>386</td>
+      <td>431</td>
+    </tr>
+    <tr style="text-align: center;">
+      <td>Yi-34B+VL-34B</td>
+      <td>零一万物</td>
+      <td>109</td>
+      <td>107.5</td>
+      <td>39</td>
+      <td>15</td>
+      <td>40</td>
+      <td>55.5</td>
+      <td>65</td>
+      <td>53</td>
+      <td>54</td>
+      <td>366</td>
+      <td>388.5</td>
+    </tr>
+  </tbody>
+</table>
+如果模型名称中含有“+VL”的字样表明，涉及到图片的题目会使用相应的多模态版本模型进行推理；如果没有“+VL”的字样，则只进行不看图的纯文本推理。
+
+各个模型具体的详细得分情况、模型输出，请参阅[全国甲卷结果](./results/全国甲卷/README.md)。
 
 > 在打分前，老师们并未被告知答案由大模型生成，但由于有的模型会存在完全不理解题意导致乱答、重复生成、回答更像解析而非解答的问题，老师们在阅卷过程中基本都会和我们确认这些情况是否是正常情况，我们会要求老师将离谱的错误直接视为答题错误，解析类型的回答以是否包含正确解题过程作为唯一准则。此外，一些老师提出，由于全部回答没有卷面，所以在作文的评判上会存在1~2分的误差。
 
@@ -135,11 +359,11 @@
 
 |                                   | 研发机构         | 模型类型 | 模型简介                                                             | 权重上传时间 | 模型链接                                                     |
 |-----------------------------------|--------------------|----------|----------------------------------------------------------------------|--------------|--------------------------------------------------------------|
-| 书生·浦语-文曲星-20B | 上海人工智能实验室 & 商汤科技联合研发 |     语言模型     | 上海人工智能实验室联合商汤科技推出的文曲星系列基础模型                           | 2024.06.04   | [🤗HuggingFace](https://huggingface.co/internlm/internlm2-wqx-20b)            |
-| 书生·浦语-文曲星-20B-VL | 上海人工智能实验室 & 商汤科技联合研发 |     多模态模型     | 上海人工智能实验室联合商汤科技推出的文曲星系列多模态基础模型                           | 2024.06.04   | [🤗HuggingFace](https://huggingface.co/internlm/internlm2-wqx-vl-20b)            |
-| 千问2-72B                    | 阿里巴巴           |  语言模型  | 由阿里巴巴公司发布的Qwen2系列最大的对话模型。                        | 2024.05.28   | [🤗HuggingFace](https://huggingface.co/Qwen/Qwen2-72B-Instruct)               |
-| 千问2-57B                     | 阿里巴巴           |     语言模型     | 由阿里巴巴公司发布的Qwen2系列MoE对话模型。                           | 2024.05.22   | [🤗HuggingFace](https://huggingface.co/Qwen/Qwen2-57B-A14B)                   |
-| 千问VL                     | 阿里巴巴           |     多模态模型     | 由阿里巴巴公司发布的多模态对话模型。                           | 2023.09.25   | [🤗HuggingFace](https://huggingface.co/Qwen/Qwen-VL-Chat)                   |
+| 书生·浦语-文曲星-20B | 上海人工智能实验室 & 商汤科技联合研发 |     语言模型     | 上海人工智能实验室联合商汤科技推出的文曲星系列基础模型。                           | 2024.06.04   | [🤗HuggingFace](https://huggingface.co/internlm/internlm2-wqx-20b)            |
+| 书生·浦语-文曲星-20B-VL | 上海人工智能实验室 & 商汤科技联合研发 |     多模态模型     | 上海人工智能实验室联合商汤科技推出的文曲星系列多模态基础模型。                           | 2024.06.04   | [🤗HuggingFace](https://huggingface.co/internlm/internlm2-wqx-vl-20b)            |
+| Qwen2-72B                    | 阿里巴巴           |  语言模型  | 由阿里巴巴公司发布的Qwen2系列最大的对话模型。                        | 2024.05.28   | [🤗HuggingFace](https://huggingface.co/Qwen/Qwen2-72B-Instruct)               |
+| Qwen2-57B                     | 阿里巴巴           |     语言模型     | 由阿里巴巴公司发布的Qwen2系列MoE对话模型。                           | 2024.05.04   | [🤗HuggingFace](https://huggingface.co/Qwen/Qwen2-57B-A14B-Instruct)                   |
+| QwenVL-7B                     | 阿里巴巴           |     多模态模型     | 由阿里巴巴公司发布的多模态对话模型。                           | 2023.09.25   | [🤗HuggingFace](https://huggingface.co/Qwen/Qwen-VL-Chat)                   |
 | Yi-1.5-34B               | 零一万物           |   语言模型       | 由零一万物公司发布Yi 1.5系列最大的模型。                             | 2024.05.12   | [🤗HuggingFace](https://huggingface.co/01-ai/Yi-1.5-34B-Chat)                 |
 | Yi-VL-34B               | 零一万物           |   多模态模型       | 由零一万物公司发布多模态大模型。                             | 2024.01.19   | [🤗HuggingFace](https://huggingface.co/01-ai/Yi-VL-34B)                 |
 | GLM4-9B                      | 智谱AI             |       语言模型   | GLM-4-9B 是智谱 AI 推出的最新一代预训练模型 GLM-4 系列中的开源版本。 | 2024.06.04   | [🤗HuggingFace](https://huggingface.co/THUDM/glm-4-9b-chat)                   |
@@ -153,37 +377,56 @@
 ├── README.md
 ├── results/
 │   ├── README.md
-│   └── 新课标I卷/      # 每种高考卷类型创建一个文件夹
-│       ├── README.md  # 对应高考卷的分数汇总
-│       ├── 数学/       # 语言模型答题情况的jupyter notebook展示
-│       │   ├── 新课标Ⅰ数学_Mixtral-8x22B-Instruct-v0.1.ipynb
-│       │   └──...
-│       ├── 英语/
-│       └── 语文/
+│   └── 新课标/      # 每种高考卷类型创建一个文件夹
+│   │   ├── README.md  # 对应高考卷的分数汇总
+│   │   ├── 数学/       # 语言模型答题情况的jupyter notebook展示
+│   │   │   ├── 新课标Ⅰ数学_Mixtral-8x22B-Instruct-v0.1.ipynb
+│   │   │   └──...
+│   │   ├── 英语/
+│   │   ├── 语文/
+│   │   ├── 化学/
+│   │   └── ...
+│   └── 全国甲卷/
+│       ├── README.md
+│       ├── 文综数学/
+│   │   │   ├── 全国甲卷文综数学_Mixtral-8x22B-Instruct-v0.1.ipynb
+│   │   │   └──...
+│       └── ...
 └── src/               # 模型推理脚本与交互代码
-    ├── infer_internlm.py    
-    └── infer_chat.py
+    ├── infer_chat.py.py    
+    ├── infer_wqx_vl.py    
+    ├── infer_wqx.py   
+    ├── web_ui.py 
+    ├── web_ui_wqx.py 
+    └── web_ui_vl.py
 ```
 
+# 题目评测
+本次评测中的语数外三科中的题目图片均被丢弃，只有文字题干会输入到模型中（新课标I卷语、数、外三科考试中，仅数学包含2道带图题目），英语考试中的听力部分（分值30分）在统计总分时所有模型默认均满分。对于文综理综题目，我们将其中带有图片的题目使用该系列模型中的开源多模态模型进行作答，而不含图片的纯文本题目则由纯文本模型作答。所有模型使用的生成参数、提示词、输出结果以及得分情况均开源在本仓库中。
+
+## 多模态题目评测
+由于Mixtral系列仅有语言模型，所以仅使用语言模型进行多模态题目的作答。同时由于QwenVL-7B作答结果过差，新课标Ⅰ卷地理仅能取得4分，为尽量体现Qwen系列的真实水平，我们同时评测Qwen2-72B文本模型对新课标Ⅰ卷与全国甲卷的物理、化学、地理的多模态题目进行作答。
+
+多模态题目处理方法参考 [多模态题目图片处理](./results/README.md#题目图片)
+
 # 最新进展
-- **[2024.06.15]** 完成6个开源模型新课标I卷语、数、外三科评测，点击[新课标I卷结果](./results/新课标I卷/README.md)查看详情
+- **[2024.07.07]** 完成6个开源模型全国甲卷除了政治外的语数外文综理综八科评测，点击[全国甲卷结果](./results/全国甲卷/README.md)查看详情
+- **[2024.07.07]** 完成6个开源模型新课标卷文综理综六科评测，点击[新课标I卷结果](./results/新课标/README.md)查看详情；修正新课标Ⅰ卷数学第10题的评测；新增Gradio调用脚本
+- **[2024.06.15]** 完成6个开源模型新课标I卷语、数、外三科评测，点击[新课标I卷结果](./results/新课标/README.md)查看详情
+
 
 # 路线图
 
 考题结果补充
-- [x] 新课标I卷语数外
+- [x] 新课标I卷语数外和文综理综
    - [x] 大语言模型测试
-- [ ] 上海卷语数外
-   - [ ] 大语言模型测试
-- [ ] 全国甲卷全科
-   - [ ] 大语言模型测试
-   - [ ] 多模态模型测试
-- [ ] 北京卷全科
-   - [ ] 大语言模型测试
-   - [ ] 多模态模型测试
+   - [x] 多模态模型测试
+- [x] 全国甲卷全科
+   - [x] 大语言模型测试
+   - [x] 多模态模型测试
 
 功能补充
-- [ ] 交互代码
+- [x] 交互代码
 
 # 致谢
 我们由衷感谢所有参与此次项目高中阅卷老师们，大模型的输出存在各种各样的问题，老师们怀着极大的耐心认真批改，感谢他们做出的努力。
