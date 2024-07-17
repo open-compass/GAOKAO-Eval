@@ -1,4 +1,4 @@
-# 新课标I卷摘要
+# 新课标卷摘要
 新课标卷覆盖的省份包括广东、福建、湖北、湖南、江苏、河北、山东、浙江、河南等29个省份及直辖市，本次测试使用新课标I卷的语数外三门和新课标的文综理综考卷（适用于山西、河南、云南、西藏、新疆）。具体题目可以在 [高考直通车](https://easylearn.baidu.com/gaokao/content/list?tabKey=question) 查看。
 
 # 评测
@@ -18,7 +18,7 @@
 <table border="1" class="dataframe">
   <thead>
     <tr style="text-align: center;">
-      <th colspan="13" style="text-align: center;">新课标Ⅰ得分情况(按照理科总分排序)</th>
+      <th colspan="13" style="text-align: center;">新课标&dagger;得分情况(按照理科总分排序)</th>
     </tr>
   </thead>
   <tbody>
@@ -159,6 +159,7 @@
     </tr>
   </tbody>
 </table>
+&dagger;表示测评使用的是新课标I卷语数外+新课标卷文理综
 
 题号带星号（*）的表示题目包含图片，如果模型名称中含有“+VL”的字样表明，涉及到图片的题目会使用相应的多模态版本模型进行推理；如果没有“+VL”的字样，则只进行不看图的纯文本推理。
 
