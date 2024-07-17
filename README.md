@@ -18,7 +18,11 @@
 - **老师打分**：邀请有高考阅卷经验的老师打分，确保评分和高考尽量一致
 - **完全公开**：生成答案的代码、模型答卷、评分结果完全开源
 
-> **正如高考分数存在误差，评测也无法做到绝对公平，因此测评中的分数只是一个参考值，而非像客观题一样的绝对分数。**
+> **正如高考分数存在误差，评测也无法做到绝对公平，因此测评中的分数只是一个参考值，为了尽量客观，每个题目我们都邀请了至少三位老师评阅取均分，我们对分差较大的题目还进行了再次审核。**
+
+> **特别值得注意的是，大模型犯错误的方式和人类考生有差异，从实践上来看阅卷老师们不完全适应给大模型评分，因此存在有题目误判的可能。**
+
+> **此外，我们也注意到，不同的高考试卷对大模型存在较大的分数随机性，因此不同省市的分数或排名可能出现明显变化。**
 
 
 
@@ -48,61 +52,69 @@
 <table border="1" class="dataframe">
   <thead>
     <tr style="text-align: right;">
-      <th colspan="5"  style="text-align: center;">语数外得分情况</th>
+      <th colspan="6"  style="text-align: center;">语数外得分情况</th>
     </tr>
   </thead>
   <tbody>
     <tr>
       <td>模型</td>
+      <td>研发机构</td>
       <td>语文(满分150)</td>
       <td>数学（满分150）</td>
       <td>英语（满分120）</td>
       <td>总分（满分420）</td>
     </tr>
     <tr>
-      <td>阿里巴巴 千问2-72B</td>
+      <td>千问2-72B</td>
+      <td>阿里巴巴</td>
       <td>124</td>
       <td>70</td>
       <td>109</td>
       <td>303</td>
     </tr>
     <tr>
-      <td>OpenAI GPT-4o</td>
+      <td>GPT-4o</td>
+      <td>OpenAI（美国）</td>
       <td>111.5</td>
       <td>73</td>
       <td>111.5</td>
       <td>296</td>
     </tr>
     <tr>
-      <td>上海人工智能实验室 书生·浦语-文曲星-20B</td>
+      <td>书生·浦语-文曲星-20B</td>
+      <td>上海人工智能实验室 & 商汤科技 联合研发</td>
       <td>112</td>
       <td>75</td>
       <td>108.5</td>
       <td>295.5</td>
     </tr>
     <tr>
-      <td>阿里巴巴 千问2-57B</td>
+      <td>千问2-57B</td>
+      <td>阿里巴巴</td>
       <td>99.5</td>
       <td>58</td>
       <td>96.5</td>
       <td>254</td>
     </tr>
     <tr>
-      <td>零一万物 Yi-1.5-34B</td>
+      <td>Yi-1.5-34B</td>
+      <td>零一万物</td>
       <td>97</td>
       <td>29</td>
       <td>104.5</td>
       <td>230.5</td>
     </tr>
     <tr>
-      <td>智谱 GLM4-9B</td>
+      <td>GLM4-9B</td>
+      <td>智谱 AI</td>
       <td>86</td>
       <td>49</td>
       <td>67</td>
       <td>202</td>
     </tr>
     <tr>
-      <td>Mistral Mixtral 8x22B</td>
+      <td>Mixtral 8x22B</td>
+      <td>Mistral</td>
       <td>77.5</td>
       <td>21</td>
       <td>86.5</td>
@@ -113,25 +125,27 @@
 
 各个模型具体的详细得分情况、模型输出，请参阅[新课标I卷结果](./results/新课标I卷/README.md)。
 
+> 在打分前，老师们并未被告知答案由大模型生成，但由于有的模型会存在完全不理解题意导致乱答、重复生成、回答更像解析而非解答的问题，老师们在阅卷过程中基本都会和我们确认这些情况是否是正常情况，我们会要求老师将离谱的错误直接视为答题错误，解析类型的回答以是否包含正确解题过程作为唯一准则。此外，一些老师提出，由于全部回答没有卷面，所以在作文的评判上会存在1~2分的误差。
+
 
 # 模型
-我们选择来自于阿里巴巴、零一万物、智谱AI、OpenAI和上海人工智能实验室的大模型进行评测。
+我们选择来自于阿里巴巴、零一万物、智谱AI、上海人工智能实验室、Mistral和OpenAI的大模型进行评测。
 
 高考题目中存在大量的带图的题目，大语言模型只回答不带图的题目（少部分情况例外），多模态大模型对所有题目进行作答。开源模型中我们只选择在2024年6月6日之前开源的模型，同时选取了目前最强大的大模型GPT-4o作为参考。参与评测大模型的情况如下表所示
 
-|                                   | 所属组织名         | 模型类型 | 模型简介                                                             | 权重上传时间 | 模型链接                                                     |
+|                                   | 研发机构         | 模型类型 | 模型简介                                                             | 权重上传时间 | 模型链接                                                     |
 |-----------------------------------|--------------------|----------|----------------------------------------------------------------------|--------------|--------------------------------------------------------------|
-| 上海人工智能实验室 书生·浦语-文曲星-20B | 上海人工智能实验室 |     语言模型     | 上海人工智能实验室推出的文曲星系列基础模型                           | 2024.06.04   | [🤗HuggingFace](https://huggingface.co/internlm/internlm2-wqx-20b)            |
-| 上海人工智能实验室 书生·浦语-文曲星-20B-VL | 上海人工智能实验室 |     多模态模型     | 上海人工智能实验室推出的文曲星系列多模态基础模型                           | 2024.06.04   | [🤗HuggingFace](https://huggingface.co/internlm/internlm2-wqx-vl-20b)            |
-| 阿里巴巴 千问2-72B                    | 阿里巴巴           |  语言模型  | 由阿里巴巴公司发布的Qwen2系列最大的对话模型。                        | 2024.05.28   | [🤗HuggingFace](https://huggingface.co/Qwen/Qwen2-72B-Instruct)               |
-| 阿里巴巴 千问2-57B                     | 阿里巴巴           |     语言模型     | 由阿里巴巴公司发布的Qwen2系列MoE对话模型。                           | 2024.05.22   | [🤗HuggingFace](https://huggingface.co/Qwen/Qwen2-57B-A14B)                   |
-| 阿里巴巴 千问VL                     | 阿里巴巴           |     多模态模型     | 由阿里巴巴公司发布的多模态对话模型。                           | 2023.09.25   | [🤗HuggingFace](https://huggingface.co/Qwen/Qwen-VL-Chat)                   |
-| 零一万物 Yi-1.5-34B               | 零一万物           |   语言模型       | 由零一万物公司发布Yi 1.5系列最大的模型。                             | 2024.05.12   | [🤗HuggingFace](https://huggingface.co/01-ai/Yi-1.5-34B-Chat)                 |
-| 零一万物 Yi-VL-34B               | 零一万物           |   多模态模型       | 由零一万物公司发布多模态大模型。                             | 2024.01.19   | [🤗HuggingFace](https://huggingface.co/01-ai/Yi-VL-34B)                 |
-| 智谱 GLM4-9B                      | 智谱AI             |       语言模型   | GLM-4-9B 是智谱 AI 推出的最新一代预训练模型 GLM-4 系列中的开源版本。 | 2024.06.04   | [🤗HuggingFace](https://huggingface.co/THUDM/glm-4-9b-chat)                   |
-| 智谱 GLM-4v-9B                      | 智谱AI             |      多模态模型   | GLM-4-9B 是智谱 AI 推出的最新一代预训练模型 GLM-4 系列中的多模态模型。 | 2024.06.04   | [🤗HuggingFace](https://huggingface.co/THUDM/glm-4-9b-chat)                   |
-| Mistral Mixtral 8x22B             | Mistral（法国）    |     语言模型     | Mixtral模型为法国AI创业公司Mistral现开源的最强大的对话模型           | 2024.04.17   | [🤗HuggingFace](https://huggingface.co/mistralai/Mixtral-8x22B-Instruct-v0.1) |
-| OpenAI GPT-4o                     | OpenAI（美国）     |      多模态模型    | OpenAI公司发布的最强大的大模型，目前也是世界上最领先的大模型         | 2024.05.13   | https://openai.com/index/hello-gpt-4o/                       |
+| 书生·浦语-文曲星-20B | 上海人工智能实验室 & 商汤科技联合研发 |     语言模型     | 上海人工智能实验室联合商汤科技推出的文曲星系列基础模型                           | 2024.06.04   | [🤗HuggingFace](https://huggingface.co/internlm/internlm2-wqx-20b)            |
+| 书生·浦语-文曲星-20B-VL | 上海人工智能实验室 & 商汤科技联合研发 |     多模态模型     | 上海人工智能实验室联合商汤科技推出的文曲星系列多模态基础模型                           | 2024.06.04   | [🤗HuggingFace](https://huggingface.co/internlm/internlm2-wqx-vl-20b)            |
+| 千问2-72B                    | 阿里巴巴           |  语言模型  | 由阿里巴巴公司发布的Qwen2系列最大的对话模型。                        | 2024.05.28   | [🤗HuggingFace](https://huggingface.co/Qwen/Qwen2-72B-Instruct)               |
+| 千问2-57B                     | 阿里巴巴           |     语言模型     | 由阿里巴巴公司发布的Qwen2系列MoE对话模型。                           | 2024.05.22   | [🤗HuggingFace](https://huggingface.co/Qwen/Qwen2-57B-A14B)                   |
+| 千问VL                     | 阿里巴巴           |     多模态模型     | 由阿里巴巴公司发布的多模态对话模型。                           | 2023.09.25   | [🤗HuggingFace](https://huggingface.co/Qwen/Qwen-VL-Chat)                   |
+| Yi-1.5-34B               | 零一万物           |   语言模型       | 由零一万物公司发布Yi 1.5系列最大的模型。                             | 2024.05.12   | [🤗HuggingFace](https://huggingface.co/01-ai/Yi-1.5-34B-Chat)                 |
+| Yi-VL-34B               | 零一万物           |   多模态模型       | 由零一万物公司发布多模态大模型。                             | 2024.01.19   | [🤗HuggingFace](https://huggingface.co/01-ai/Yi-VL-34B)                 |
+| GLM4-9B                      | 智谱AI             |       语言模型   | GLM-4-9B 是智谱 AI 推出的最新一代预训练模型 GLM-4 系列中的开源版本。 | 2024.06.04   | [🤗HuggingFace](https://huggingface.co/THUDM/glm-4-9b-chat)                   |
+| GLM-4v-9B                      | 智谱AI             |      多模态模型   | GLM-4-9B 是智谱 AI 推出的最新一代预训练模型 GLM-4 系列中的多模态模型。 | 2024.06.04   | [🤗HuggingFace](https://huggingface.co/THUDM/glm-4-9b-chat)                   |
+| Mixtral 8x22B             | Mistral（法国）    |     语言模型     | Mixtral模型为法国AI创业公司Mistral现开源的最强大的对话模型           | 2024.04.17   | [🤗HuggingFace](https://huggingface.co/mistralai/Mixtral-8x22B-Instruct-v0.1) |
+| GPT-4o                     | OpenAI（美国）     |      多模态模型    | OpenAI公司发布的最强大的大模型，目前也是世界上最领先的大模型         | 2024.05.13   | https://openai.com/index/hello-gpt-4o/                       |
 
 # 文件结构
 该项目的文件结构如下所示：
@@ -173,6 +187,8 @@
 
 # 致谢
 我们由衷感谢所有参与此次项目高中阅卷老师们，大模型的输出存在各种各样的问题，老师们怀着极大的耐心认真批改，感谢他们做出的努力。
+
+
 
 ```
 @misc{internlm_gaokao,
