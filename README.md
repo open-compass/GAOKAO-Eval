@@ -431,6 +431,16 @@
 
 
 ```
+@misc{lei2024gaokaoevaldoeshighscores,
+      title={GAOKAO-Eval: Does high scores truly reflect strong capabilities in LLMs?}, 
+      author={Zhikai Lei and Tianyi Liang and Hanglei Hu and Jin Zhang and Yunhua Zhou and Yunfan Shao and Linyang Li and Chenchui Li and Changbo Wang and Hang Yan and Qipeng Guo},
+      year={2024},
+      eprint={2412.10056},
+      archivePrefix={arXiv},
+      primaryClass={cs.CL},
+      url={https://arxiv.org/abs/2412.10056}, 
+}
+
 @misc{internlm_gaokao,
   author       = {InternLM Team},
   title        = {GAOKAO-Eval: A Comprehensive GAOKAO Evaluation},
